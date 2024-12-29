@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dlsapp</title>
+</head>
+<body>
+    <h1>Sales Summary</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Phone</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for sale in sales %}
+                <tr>
+                    <td>{{ sale.phone.name }}</td>
+                    <td>{{ sale.quantity }}</td>
+                    <td>${{ sale.total_price }}</td>
+                    <td>{{ sale.date }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    
+</body>
+</html>
